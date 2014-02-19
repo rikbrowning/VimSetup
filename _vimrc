@@ -21,7 +21,9 @@ set noswapfile
 set wildmode=longest:full
 set wildmenu " allow some tab auto complete
 
-
+"mappings
+nore ; :
+nore x dd
 
 if has("gui_running")
     set background=dark
@@ -30,9 +32,12 @@ if has("gui_running")
     set guifont=Consolas:h12
     "x on an English Windows version.
     au GUIEnter * simalt ~x
-
+    "add in window controls
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
+    "set up menu to look correct
+    unmenu! Edit.Paste
+    aunmenu Edit.Paste
+    nnoremenu 20.360 &Edit.&Paste<Tab>Ctrl-V    	"+gP
+    cnoremenu    &Edit.&Paste<Tab>Ctrl-V		<C-R>+
 endif
-
-"mappings
-nore ; :
-nore x dd
