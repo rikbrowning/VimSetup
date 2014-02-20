@@ -15,21 +15,22 @@ set scrolloff=5 "keep 5 lines above/below
 set number "set line numbers
 set noerrorbells "no anoying bells please
 set hlsearch
-set nowrap
 set nobackup
 set noswapfile
 set wildmode=longest:full
 set wildmenu " allow some tab auto complete
 
+
 "mappings
 nore ; :
 nore x dd
+
 
 if has("gui_running")
     set background=dark
     colorscheme solarized
     " set up my nice font
-    set guifont=Consolas:h12
+    set guifont=Consolas:h11
     "x on an English Windows version.
     au GUIEnter * simalt ~x
     "add in window controls
@@ -41,3 +42,4 @@ if has("gui_running")
     nnoremenu 20.360 &Edit.&Paste<Tab>Ctrl-V    	"+gP
     cnoremenu    &Edit.&Paste<Tab>Ctrl-V		<C-R>+
 endif
+
