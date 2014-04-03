@@ -9,7 +9,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set backspace=2 " make backspace work like most other apps
-set smartcase "smart case for searching
+set ignorecase "ignore case for searching
 set mousehide "Hide the mouse when typing text
 set scrolloff=5 "keep 5 lines above/below
 set number "set line numbers
